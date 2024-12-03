@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aditya11kumar/portfolio-snippets.git/static/css/main.abf8de4e.css",
+    "main.js": "/aditya11kumar/portfolio-snippets.git/static/js/main.9f0c172f.js",
+    "index.html": "/aditya11kumar/portfolio-snippets.git/index.html",
+    "main.abf8de4e.css.map": "/aditya11kumar/portfolio-snippets.git/static/css/main.abf8de4e.css.map",
+    "main.9f0c172f.js.map": "/aditya11kumar/portfolio-snippets.git/static/js/main.9f0c172f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abf8de4e.css",
+    "static/js/main.9f0c172f.js"
+  ]
+}
