@@ -1,0 +1,100 @@
+{
+    "features": [
+      {
+        "title": "Variables and Constants",
+        "description": "Declare variables and constants using var, let, and const.",
+        "example": "let age = 25;\nconst name = 'John';\nvar isStudent = true;"
+      },
+      {
+        "title": "Data Types",
+        "description": "JavaScript supports multiple data types like numbers, strings, objects, and booleans.",
+        "example": "let number = 42;\nlet text = 'Hello';\nlet isActive = true;\nlet user = { name: 'Alice', age: 30 };"
+      },
+      {
+        "title": "Functions",
+        "description": "Functions are reusable blocks of code that can take parameters and return values.",
+        "example": "function greet(name) {\n  return `Hello, ${name}!`;\n}\nconsole.log(greet('Alice'));"
+      },
+      {
+        "title": "Arrow Functions",
+        "description": "A concise way to write functions using the arrow syntax.",
+        "example": "const add = (a, b) => a + b;\nconsole.log(add(5, 3));"
+      },
+      {
+        "title": "Arrays",
+        "description": "Used to store multiple values in a single variable.",
+        "example": "const fruits = ['apple', 'banana', 'cherry'];\nconsole.log(fruits[1]);"
+      },
+      {
+        "title": "Objects",
+        "description": "Used to store collections of key-value pairs.",
+        "example": "const person = { name: 'John', age: 25 };\nconsole.log(person.name);"
+      },
+      {
+        "title": "Promises",
+        "description": "Used for asynchronous operations to handle success and failure cases.",
+        "example": "const fetchData = new Promise((resolve, reject) => {\n  setTimeout(() => resolve('Data fetched'), 1000);\n});\nfetchData.then(data => console.log(data));"
+      },
+      {
+        "title": "Async/Await",
+        "description": "Simplifies working with promises and asynchronous code.",
+        "example": "async function fetchData() {\n  const data = await fetch('https://api.example.com');\n  return data.json();\n}"
+      },
+      {
+        "title": "Event Listeners",
+        "description": "React to user actions like clicks and keypresses.",
+        "example": "document.getElementById('btn').addEventListener('click', () => {\n  alert('Button clicked!');\n});"
+      },
+      {
+        "title": "Template Literals",
+        "description": "String literals allowing embedded expressions.",
+        "example": "const name = 'John';\nconsole.log(`Hello, ${name}!`);"
+      },
+      {
+        "title": "Modules",
+        "description": "Import and export functions or variables between files.",
+        "example": "// math.js\nexport const add = (a, b) => a + b;\n\n// main.js\nimport { add } from './math.js';\nconsole.log(add(5, 3));"
+      },
+      {
+        "title": "Closures",
+        "description": "Functions that remember the variables from their outer scope.",
+        "example": "function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    return count;\n  };\n}\nconst counter = outer();\nconsole.log(counter());"
+      },
+      {
+        "title": "ES6 Features",
+        "description": "Features like destructuring, default parameters, and spread/rest operators.",
+        "example": "// Destructuring\nconst [a, b] = [1, 2];\n\n// Default parameters\nfunction greet(name = 'Guest') {\n  return `Hello, ${name}!`;\n}\n\n// Spread operator\nconst numbers = [1, 2, 3];\nconst moreNumbers = [...numbers, 4, 5];"
+      },
+      {
+        "title": "Error Handling",
+        "description": "Handle errors using try-catch blocks.",
+        "example": "try {\n  throw new Error('Something went wrong!');\n} catch (error) {\n  console.error(error.message);\n}"
+      },
+      {
+        "title": "DOM Manipulation",
+        "description": "Access and modify elements in the HTML document.",
+        "example": "document.getElementById('title').textContent = 'Updated Title';"
+      },
+      {
+        "title": "Local Storage",
+        "description": "Store data in the browser that persists even after refreshing the page.",
+        "example": "localStorage.setItem('name', 'John');\nconsole.log(localStorage.getItem('name'));"
+      },
+      {
+        "title": "Classes",
+        "description": "Define object templates and use inheritance.",
+        "example": "class Animal {\n  constructor(name) {\n    this.name = name;\n  }\n  speak() {\n    console.log(`${this.name} makes a noise.`);\n  }\n}\nconst dog = new Animal('Dog');\ndog.speak();"
+      },
+      {
+        "title": "Set and Map",
+        "description": "New data structures for unique values and key-value pairs.",
+        "example": "const set = new Set([1, 2, 2, 3]);\nconsole.log(set);\n\nconst map = new Map();\nmap.set('key', 'value');\nconsole.log(map.get('key'));"
+      },
+      {
+        "title": "Regular Expressions",
+        "description": "Pattern matching in strings.",
+        "example": "const regex = /hello/i;\nconsole.log(regex.test('Hello World!'));"
+      }
+    ]
+  }
+  

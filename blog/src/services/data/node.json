@@ -1,0 +1,80 @@
+{
+    "features": [
+      {
+        "title": "Create a Simple Server",
+        "description": "Basic HTTP server using Node.js.",
+        "example": "const http = require('http');\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Hello, Node.js!');\n});\nserver.listen(3000, () => console.log('Server running on port 3000'));"
+      },
+      {
+        "title": "Read a File",
+        "description": "Using the File System module to read a file.",
+        "example": "const fs = require('fs');\nfs.readFile('example.txt', 'utf8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});"
+      },
+      {
+        "title": "Connect to MySQL",
+        "description": "Connecting to a MySQL database using `mysql2`.",
+        "example": "const mysql = require('mysql2');\nconst connection = mysql.createConnection({\n  host: 'localhost',\n  user: 'root',\n  password: 'password',\n  database: 'mydatabase'\n});\nconnection.connect(err => {\n  if (err) throw err;\n  console.log('Connected to MySQL');\n});\nconnection.query('SELECT * FROM users', (err, results) => {\n  if (err) throw err;\n  console.log(results);\n});"
+      },
+      {
+        "title": "Connect to PostgreSQL",
+        "description": "Connecting to a PostgreSQL database using `pg`.",
+        "example": "const { Client } = require('pg');\nconst client = new Client({\n  host: 'localhost',\n  user: 'postgres',\n  password: 'password',\n  database: 'mydatabase'\n});\nclient.connect(err => {\n  if (err) throw err;\n  console.log('Connected to PostgreSQL');\n});\nclient.query('SELECT * FROM users', (err, res) => {\n  if (err) throw err;\n  console.log(res.rows);\n});"
+      },
+      {
+        "title": "Connect to MongoDB",
+        "description": "Connecting to a MongoDB database using Mongoose.",
+        "example": "const mongoose = require('mongoose');\nmongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })\n  .then(() => console.log('Connected to MongoDB'))\n  .catch(err => console.error('Error connecting to MongoDB', err));"
+      },
+      {
+        "title": "Perform CRUD Operations with MongoDB",
+        "description": "Create, Read, Update, and Delete operations using Mongoose.",
+        "example": "const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst UserSchema = new Schema({ name: String, age: Number });\nconst User = mongoose.model('User', UserSchema);\n\n// Create\nconst newUser = new User({ name: 'John', age: 30 });\nnewUser.save().then(() => console.log('User saved'));\n\n// Read\nUser.find().then(users => console.log(users));\n\n// Update\nUser.findByIdAndUpdate(id, { name: 'Jane' }).then(() => console.log('User updated'));\n\n// Delete\nUser.findByIdAndDelete(id).then(() => console.log('User deleted'));"
+      },
+      {
+        "title": "JWT Authentication",
+        "description": "Secure your application using JSON Web Tokens (JWT).",
+        "example": "const jwt = require('jsonwebtoken');\nconst token = jwt.sign({ id: user._id }, 'secretKey', { expiresIn: '1h' });\nconst decoded = jwt.verify(token, 'secretKey');\nconsole.log(decoded);"
+      },
+      {
+        "title": "Using Environment Variables",
+        "description": "Load and use environment variables with dotenv.",
+        "example": "require('dotenv').config();\nconsole.log(process.env.MY_SECRET_KEY);"
+      },
+      {
+        "title": "Schedule Tasks",
+        "description": "Schedule tasks using node-cron.",
+        "example": "const cron = require('node-cron');\ncron.schedule('0 * * * *', () => console.log('Task runs every hour'));"
+      },
+      {
+        "title": "Express Route Groups",
+        "description": "Organize routes into groups in Express.",
+        "example": "const express = require('express');\nconst app = express();\nconst userRouter = express.Router();\n\nuserRouter.get('/', (req, res) => res.send('User Home'));\nuserRouter.get('/profile', (req, res) => res.send('User Profile'));\n\napp.use('/users', userRouter);\napp.listen(3000, () => console.log('Server running on port 3000'));"
+      },
+      {
+        "title": "Express Static Files",
+        "description": "Serve static files in an Express application.",
+        "example": "const express = require('express');\nconst app = express();\napp.use(express.static('public'));\napp.listen(3000, () => console.log('Serving static files on port 3000'));"
+      },
+      {
+        "title": "Error Handling in Express",
+        "description": "Handle errors gracefully in an Express application.",
+        "example": "app.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).send('Something went wrong!');\n});"
+      },
+      {
+        "title": "Setup WebSocket Server",
+        "description": "Setup a WebSocket server using ws.",
+        "example": "const WebSocket = require('ws');\nconst wss = new WebSocket.Server({ port: 8080 });\nwss.on('connection', ws => {\n  console.log('New connection');\n  ws.on('message', message => console.log(`Received: ${message}`));\n  ws.send('Hello from server');\n});"
+      },
+      {
+        "title": "Upload Files with Multer",
+        "description": "Handle file uploads using Multer middleware.",
+        "example": "const express = require('express');\nconst multer = require('multer');\nconst upload = multer({ dest: 'uploads/' });\n\nconst app = express();\napp.post('/upload', upload.single('file'), (req, res) => {\n  console.log(req.file);\n  res.send('File uploaded!');\n});\napp.listen(3000, () => console.log('Server running on port 3000'));"
+      },
+      {
+        "title": "Setup Socket.IO",
+        "description": "Setup real-time communication with Socket.IO.",
+        "example": "const express = require('express');\nconst http = require('http');\nconst { Server } = require('socket.io');\nconst app = express();\nconst server = http.createServer(app);\nconst io = new Server(server);\n\nio.on('connection', socket => {\n  console.log('A user connected');\n  socket.on('disconnect', () => console.log('User disconnected'));\n});\n\nserver.listen(3000, () => console.log('Socket.IO server running on port 3000'));"
+      }
+    ]
+  }
+  

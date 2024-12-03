@@ -1,0 +1,240 @@
+{
+    "features": [
+      {
+        "title": "Arrow Functions",
+        "description": "A concise syntax for defining functions.",
+        "example": "const add = (a, b) => a + b;"
+      },
+      {
+        "title": "Default Parameters",
+        "description": "Define default values for function parameters.",
+        "example": "function greet(name = 'Guest') { \n  console.log(`Hello, ${name}`); \n}"
+      },
+      {
+        "title": "Template Literals",
+        "description": "String literals with embedded expressions.",
+        "example": "`Hello, ${name}!`"
+      },
+      {
+        "title": "Object Destructuring",
+        "description": "Extract properties from objects into variables.",
+        "example": "const { name, age } = user;"
+      },
+      {
+        "title": "Array Destructuring",
+        "description": "Extract elements from arrays into variables.",
+        "example": "const [first, second] = [1, 2, 3];"
+      },
+      {
+        "title": "Spread Operator",
+        "description": "Expand elements of an array or object.",
+        "example": "const newArr = [...oldArr, 4, 5];"
+      },
+      {
+        "title": "Rest Operator",
+        "description": "Collect remaining elements into an array.",
+        "example": "const [first, ...rest] = [1, 2, 3, 4];"
+      },
+      {
+        "title": "Modules (Export/Import)",
+        "description": "Share and reuse code across files.",
+        "example": "export const add = (a, b) => a + b; \n// In another file: \nimport { add } from './file';"
+      },
+      {
+        "title": "Classes",
+        "description": "ES6 syntax for defining classes.",
+        "example": "class Person { \n  constructor(name) { \n    this.name = name; \n  } \n}"
+      },
+      {
+        "title": "Promises",
+        "description": "Handle asynchronous operations.",
+        "example": "fetch(url) \n  .then(response => response.json());"
+      },
+      {
+        "title": "Async/Await",
+        "description": "Simplify asynchronous code with async functions.",
+        "example": "async function fetchData() { \n  const data = await fetch(url); \n  return data.json(); \n}"
+      },
+      {
+        "title": "Let and Const",
+        "description": "Block-scoped variable declarations.",
+        "example": "let x = 10; \nconst y = 20;"
+      },
+      {
+        "title": "Symbol",
+        "description": "Create unique identifiers.",
+        "example": "const uniqueKey = Symbol('key');"
+      },
+      {
+        "title": "Iterators",
+        "description": "Create custom iterable objects.",
+        "example": "const iterator = arr[Symbol.iterator]();"
+      },
+      {
+        "title": "Generators",
+        "description": "Define iterators using a function with `yield`.",
+        "example": "function* gen() { \n  yield 1; \n  yield 2; \n}"
+      },
+      {
+        "title": "For...of Loop",
+        "description": "Iterate over iterable objects.",
+        "example": "for (const item of array) { \n  console.log(item); \n}"
+      },
+      {
+        "title": "Map",
+        "description": "A key-value pair data structure.",
+        "example": "const map = new Map(); \nmap.set('key', 'value');"
+      },
+      {
+        "title": "Set",
+        "description": "A collection of unique values.",
+        "example": "const set = new Set([1, 2, 3, 1]);"
+      },
+      {
+        "title": "WeakMap",
+        "description": "Key-value pairs with weakly referenced keys.",
+        "example": "const weakMap = new WeakMap();"
+      },
+      {
+        "title": "WeakSet",
+        "description": "A collection of objects held weakly.",
+        "example": "const weakSet = new WeakSet();"
+      },
+      {
+        "title": "Object.assign",
+        "description": "Copy properties between objects.",
+        "example": "const newObj = Object.assign({}, obj);"
+      },
+      {
+        "title": "Object.keys",
+        "description": "Get an array of an object's keys.",
+        "example": "const keys = Object.keys(obj);"
+      },
+      {
+        "title": "Object.values",
+        "description": "Get an array of an object's values.",
+        "example": "const values = Object.values(obj);"
+      },
+      {
+        "title": "Object.entries",
+        "description": "Get an array of key-value pairs.",
+        "example": "const entries = Object.entries(obj);"
+      },
+      {
+        "title": "Object.freeze",
+        "description": "Prevent modifications to an object.",
+        "example": "Object.freeze(obj);"
+      },
+      {
+        "title": "Object.seal",
+        "description": "Prevent adding/removing properties from an object.",
+        "example": "Object.seal(obj);"
+      },
+      {
+        "title": "Object.is",
+        "description": "Compare values for strict equality.",
+        "example": "Object.is(0, -0); // false"
+      },
+      {
+        "title": "Includes",
+        "description": "Check if an array includes a value.",
+        "example": "array.includes(5);"
+      },
+      {
+        "title": "Find",
+        "description": "Find the first matching element in an array.",
+        "example": "array.find(item => item.id === 1);"
+      },
+      {
+        "title": "FindIndex",
+        "description": "Find the index of the first matching element.",
+        "example": "array.findIndex(item => item.id === 1);"
+      },
+      {
+        "title": "Flat",
+        "description": "Flatten nested arrays.",
+        "example": "array.flat();"
+      },
+      {
+        "title": "FlatMap",
+        "description": "Map and flatten an array in one step.",
+        "example": "array.flatMap(item => [item, item * 2]);"
+      },
+      {
+        "title": "Trim",
+        "description": "Remove whitespace from strings.",
+        "example": "'  hello  '.trim();"
+      },
+      {
+        "title": "StartsWith",
+        "description": "Check if a string starts with another string.",
+        "example": "'hello'.startsWith('he');"
+      },
+      {
+        "title": "EndsWith",
+        "description": "Check if a string ends with another string.",
+        "example": "'hello'.endsWith('lo');"
+      },
+      {
+        "title": "Repeat",
+        "description": "Repeat a string a specified number of times.",
+        "example": "'hello'.repeat(3);"
+      },
+      {
+        "title": "Number.isFinite",
+        "description": "Check if a value is a finite number.",
+        "example": "Number.isFinite(10);"
+      },
+      {
+        "title": "Number.isInteger",
+        "description": "Check if a value is an integer.",
+        "example": "Number.isInteger(10.5);"
+      },
+      {
+        "title": "Math.sign",
+        "description": "Determine the sign of a number.",
+        "example": "Math.sign(-5); // -1"
+      },
+      {
+        "title": "Math.trunc",
+        "description": "Truncate a number to its integer part.",
+        "example": "Math.trunc(4.9); // 4"
+      },
+      {
+        "title": "New.target",
+        "description": "Check if a function was called with `new`.",
+        "example": "if (!new.target) throw 'Must use new';"
+      },
+      {
+        "title": "Block Scope",
+        "description": "Variables declared with let/const are block-scoped.",
+        "example": "{ \n  let x = 10; \n  console.log(x); \n}"
+      },
+      {
+        "title": "Tagged Templates",
+        "description": "Custom processing of template literals.",
+        "example": "tag`Hello ${name}!`"
+      },
+      {
+        "title": "Proxy",
+        "description": "Intercept operations on objects.",
+        "example": "const proxy = new Proxy(target, handler);"
+      },
+      {
+        "title": "Reflect",
+        "description": "Built-in object with methods for interacting with object properties.",
+        "example": "Reflect.get(obj, 'key');"
+      },
+      {
+        "title": "Intl",
+        "description": "Internationalization support.",
+        "example": "new Intl.NumberFormat('en-US').format(1234567.89);"
+      },
+      {
+        "title": "Dynamic Imports",
+        "description": "Import modules dynamically.",
+        "example": "import('./module.js') \n  .then(module => module.default());"
+      }
+    ]
+  }
+  

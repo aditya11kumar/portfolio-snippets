@@ -1,0 +1,73 @@
+/* Custom Accordion Styles */
+.table{
+    margin: 10px
+}
+.custom-accordion .accordion-item {
+    background-color: #343a40; /* Dark background for the accordion items */
+    border: none; /* Remove default border */
+    border-radius: 8px;
+    margin: 10px;
+  }
+  
+  .custom-accordion .accordion-header {
+    background-color: #495057; /* Lighter dark for the header */
+    color: #ffffff; /* White text color for the header */
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 15px; /* Adjust padding as needed */
+    border-radius: 12px;
+  }
+  
+  .custom-accordion .accordion-body {
+    background-color: #212529; /* Dark body background */
+    color: #f8f9fa; /* Light text color */
+    padding: 15px; /* Body padding */
+  }
+  
+  .custom-accordion .accordion-button {
+    background-color: #495057; /* Lighter background for the button */
+    color: #ffffff; /* White text for the button */
+    border: none; /* Remove the border */
+  }
+  
+  .custom-accordion .accordion-button:not(.collapsed) {
+    /* background-color: #007bff; Blue background when expanded */
+    border-radius: 12px;
+    color: #ffffff; /* White text */
+  }
+  
+  .custom-accordion .accordion-button:focus {
+    box-shadow: none; /* Remove focus outline */
+  }
+  
+  .custom-accordion .accordion-item + .accordion-item {
+    margin-top: 10px; /* Space between items */
+  }
+  
+  /* Copy Button inside the accordion */
+  .custom-accordion .btn-outline-primary {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 12px;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+  }
+  
+  .custom-accordion .btn-outline-primary:hover {
+    border-radius: 12px;
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Optional: Additional responsive styles for better viewing on small screens */
+  @media (max-width: 768px) {
+    .custom-accordion .accordion-button {
+      font-size: 1em;
+    }
+  
+    .custom-accordion .accordion-header {
+      font-size: 1em;
+    }
+  }
+  

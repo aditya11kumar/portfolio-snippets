@@ -1,0 +1,126 @@
+   /* General reset */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #222; /* Darker background */
+    color: #f4f4f4; /* Lighter text for readability */
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  header, section {
+    /* max-width: 1000px; Constrained width for readability */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    padding-top: 40px;
+    border-bottom: 2px solid #f4f4f4; /* Light border for contrast */
+  }
+  
+  header h1 {
+    font-size: 2.2em;
+    color: #f4f4f4;
+  }
+  
+  p{
+      font-size: large ;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    color: #b0b0b0;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .contact-info a {
+    color: #4da8da; /* Lighter blue */
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Titles */
+  h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #eaeaea;
+  }
+  
+  /* Sections */
+  .section-content {
+    padding: 20px;
+    background: #333; /* Dark background for contrast */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-content ul {
+    list-style-type: none;
+    margin-top: 10px;
+  }
+  
+  .section-content ul li {
+    padding: 6px 0;
+    color: #d9d9d9; /* Slightly lighter for distinction */
+  }
+  
+  .project {
+    margin-bottom: 15px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #111; /* Dark footer background */
+    color: #f4f4f4;
+    border-top: 1px solid #444;
+  }
+  ul{
+    padding-left: 0;
+  }
+  
+  footer a {
+    color: #4da8da;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 1.8em;
+    }
+    
+    h2 {
+      font-size: 1.6em;
+    }
+  }
+  

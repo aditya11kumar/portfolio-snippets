@@ -1,0 +1,135 @@
+{
+    "features": [
+      {
+        "title": "JSX",
+        "description": "A syntax extension for JavaScript used to describe UI components.",
+        "example": "<div>Hello, {user}!</div>"
+      },
+      {
+        "title": "Functional Components",
+        "description": "Simple functions that return JSX elements.",
+        "example": "const Greeting = () => <h1>Hello!</h1>;"
+      },
+      {
+        "title": "Class Components",
+        "description": "Components written as ES6 classes with lifecycle methods.",
+        "example": "class Greeting extends React.Component {\n render() {\n return <h1>Hello!</h1>;\n }}"
+      },
+      {
+        "title": "useState Hook",
+        "description": "Allows you to add state to a functional component.",
+        "example": "const [count, setCount] = useState(0);"
+      },
+      {
+        "title": "useEffect Hook",
+        "description": "Performs side effects in a functional component.",
+        "example": "useEffect(() => {\n console.log('Component rendered');\n }, [dependency]);"
+      },
+      {
+        "title": "Basic Routing",
+        "description": "Simple route definitions using React Router.",
+        "example": "<BrowserRouter>\n <Routes>\n <Route path='/home' element={<Home />} />\n </Routes>\n</BrowserRouter>"
+      },
+      {
+        "title": "Route Layout",
+        "description": "Define shared layouts for routes.",
+        "example": "<BrowserRouter>\n <Routes>\n <Route element={<Layout />}>\n <Route path='/' element={<Home />} />\n <Route path='/about' element={<About />} />\n </Route>\n </Routes>\n</BrowserRouter>"
+      },
+      {
+        "title": "Nested Routes",
+        "description": "Define nested routes for better hierarchy.",
+        "example": "<Routes>\n <Route path='dashboard' element={<Dashboard />}>\n <Route path='profile' element={<Profile />} />\n <Route path='settings' element={<Settings />} />\n </Route>\n</Routes>"
+      },
+      {
+        "title": "Link Component",
+        "description": "Navigate to different routes using React Router.",
+        "example": "<Link to='/home'>Go to Home</Link>"
+      },
+      {
+        "title": "External Links",
+        "description": "Navigate to external sites.",
+        "example": "<a href='https://example.com' target='_blank' rel='noopener noreferrer'>Visit Example</a>"
+      },
+      {
+        "title": "useParams Hook",
+        "description": "Access route parameters.",
+        "example": "const { id } = useParams();"
+      },
+      {
+        "title": "useNavigate Hook",
+        "description": "Programmatically navigate between routes.",
+        "example": "const navigate = useNavigate();\n navigate('/home');"
+      },
+      {
+        "title": "useLocation Hook",
+        "description": "Access the current route location.",
+        "example": "const location = useLocation();\n console.log(location.pathname);"
+      },
+      {
+        "title": "Error Boundary",
+        "description": "Catch errors and display fallback UI.",
+        "example": "class ErrorBoundary extends React.Component {\n componentDidCatch(error, info) {\n console.error(error);\n }\n }"
+      },
+      {
+        "title": "Context API",
+        "description": "Share data across components without prop drilling.",
+        "example": "const ThemeContext = React.createContext();\n const theme = useContext(ThemeContext);"
+      },
+      {
+        "title": "Custom Hook",
+        "description": "Encapsulate reusable logic in a custom hook.",
+        "example": "const useCounter = () => {\n const [count, setCount] = useState(0);\n return [count, () => setCount(count + 1)];\n };"
+      },
+      {
+        "title": "Code Splitting",
+        "description": "Split code for faster load times.",
+        "example": "const LazyComponent = React.lazy(() => import('./Component'));"
+      },
+      {
+        "title": "React.memo",
+        "description": "Optimize rendering of pure components.",
+        "example": "export default React.memo(MyComponent);"
+      },
+      {
+        "title": "React.forwardRef",
+        "description": "Forward refs to child components.",
+        "example": "const Input = React.forwardRef((props, ref) => <input ref={ref} {...props} />);"
+      },
+      {
+        "title": "Suspense with Lazy Loading",
+        "description": "Display fallback while lazy components load.",
+        "example": "<Suspense fallback={<div>Loading...</div>}>\n <LazyComponent />\n</Suspense>"
+      },
+      {
+        "title": "Redux Toolkit",
+        "description": "Simplify Redux with Redux Toolkit.",
+        "example": "const store = configureStore({ reducer: rootReducer });\n <Provider store={store}><App /></Provider>"
+      },
+      {
+        "title": "Controlled Form Components",
+        "description": "Control form inputs using state.",
+        "example": "const [value, setValue] = useState('');\n <input value={value} onChange={e => setValue(e.target.value)} />"
+      },
+      {
+        "title": "React Query",
+        "description": "Fetch and cache data in React.",
+        "example": "const { data, isLoading } = useQuery('key', fetchFunction);"
+      },
+      {
+        "title": "React Testing Library",
+        "description": "Write tests for React components.",
+        "example": "render(<Component />);\n expect(screen.getByText('Hello')).toBeInTheDocument();"
+      },
+      {
+        "title": "Axios for HTTP Requests",
+        "description": "Fetch data from APIs using Axios.",
+        "example": "axios.get('/api/data').then(response => setData(response.data));"
+      },
+      {
+        "title": "React Native Navigation",
+        "description": "Navigation in React Native applications.",
+        "example": "import { NavigationContainer } from '@react-navigation/native';\n <NavigationContainer><Stack.Navigator></Stack.Navigator></NavigationContainer>"
+      }
+    ]
+  }
+  

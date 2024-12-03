@@ -1,0 +1,95 @@
+{
+    "features": [
+      {
+        "title": "Basic SELECT Statement",
+        "description": "Used to fetch data from a database table.",
+        "example": "SELECT * FROM employees;"
+      },
+      {
+        "title": "Column Filtering",
+        "description": "Retrieve specific columns from a table.",
+        "example": "SELECT first_name, last_name FROM employees;"
+      },
+      {
+        "title": "Filtering Data with WHERE",
+        "description": "Filter rows that meet specific conditions.",
+        "example": "SELECT * FROM employees WHERE age > 30;"
+      },
+      {
+        "title": "Sorting Data with ORDER BY",
+        "description": "Sort retrieved rows in ascending or descending order.",
+        "example": "SELECT * FROM employees ORDER BY last_name ASC;"
+      },
+      {
+        "title": "Using GROUP BY",
+        "description": "Group rows sharing a property and apply aggregate functions.",
+        "example": "SELECT department, COUNT(*) AS total_employees FROM employees GROUP BY department;"
+      },
+      {
+        "title": "Filtering Groups with HAVING",
+        "description": "Apply conditions to grouped data.",
+        "example": "SELECT department, AVG(salary) AS average_salary FROM employees GROUP BY department HAVING average_salary > 50000;"
+      },
+      {
+        "title": "JOIN Operations",
+        "description": "Combine rows from two or more tables based on a related column.",
+        "example": "SELECT employees.name, departments.department_name FROM employees INNER JOIN departments ON employees.department_id = departments.id;"
+      },
+      {
+        "title": "Subqueries",
+        "description": "Embed a query within another query.",
+        "example": "SELECT name FROM employees WHERE department_id = (SELECT id FROM departments WHERE department_name = 'Finance');"
+      },
+      {
+        "title": "INSERT INTO",
+        "description": "Add new rows of data into a table.",
+        "example": "INSERT INTO employees (name, age, department_id) VALUES ('John Doe', 28, 3);"
+      },
+      {
+        "title": "UPDATE Statement",
+        "description": "Modify existing records in a table.",
+        "example": "UPDATE employees SET salary = salary * 1.1 WHERE department_id = 2;"
+      },
+      {
+        "title": "DELETE Statement",
+        "description": "Remove specific rows from a table.",
+        "example": "DELETE FROM employees WHERE department_id = 4;"
+      },
+      {
+        "title": "CREATE TABLE",
+        "description": "Define a new table and its schema.",
+        "example": "CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department_id INT, salary DECIMAL(10,2));"
+      },
+      {
+        "title": "Adding Constraints",
+        "description": "Ensure data integrity by adding constraints like PRIMARY KEY or UNIQUE.",
+        "example": "ALTER TABLE employees ADD CONSTRAINT unique_email UNIQUE (email);"
+      },
+      {
+        "title": "Creating Indexes",
+        "description": "Improve query performance with indexes.",
+        "example": "CREATE INDEX idx_department_name ON departments (department_name);"
+      },
+      {
+        "title": "Using Transactions",
+        "description": "Manage multiple SQL statements as a single unit.",
+        "example": "BEGIN TRANSACTION; UPDATE accounts SET balance = balance - 100 WHERE id = 1; UPDATE accounts SET balance = balance + 100 WHERE id = 2; COMMIT;"
+      },
+      {
+        "title": "Stored Procedures",
+        "description": "Define reusable SQL code that can be executed with parameters.",
+        "example": "CREATE PROCEDURE GetEmployeesByDepartment(IN dept_id INT) BEGIN SELECT * FROM employees WHERE department_id = dept_id; END;"
+      },
+      {
+        "title": "Triggers",
+        "description": "Execute SQL code automatically in response to certain events.",
+        "example": "CREATE TRIGGER after_employee_insert AFTER INSERT ON employees FOR EACH ROW BEGIN INSERT INTO audit_log (event, event_date) VALUES ('Employee added', NOW()); END;"
+      },
+      {
+        "title": "Views",
+        "description": "Create a virtual table based on a query.",
+        "example": "CREATE VIEW EmployeeSalaryView AS SELECT name, department_id, salary FROM employees WHERE salary > 50000;"
+      }
+    ]
+  }
+  
