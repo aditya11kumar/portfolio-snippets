@@ -14,14 +14,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "homepage": "https://github.com/aditya11kumar/portfolio-snippets.git",
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+,
+  "homepage": " https://aditya11kumar.github.io/portfolio-snippets",
   "eslintConfig": {
     "extends": [
       "react-app",

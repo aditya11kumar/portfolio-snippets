@@ -9,7 +9,7 @@ export default function NoPage() {
     
   return (
     <div>
-      <p onClick ={handleNavigate} style={{cursor:'pointer'}}>This is a invalid route. Please prpceed to HomePage</p>
+      <p onClick ={handleNavigate} style={{cursor:'pointer'}}>This is a invalid route. Please proceed to HomePage</p>
     </div>
   )
 }
