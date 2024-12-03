@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from '../../pages/Layout'
 import List from '../../pages/List'
 import NoPage from '../../pages/NoPage'
@@ -14,7 +14,7 @@ import JavaScript from '../../pages/JavaScript'
 export default function Routing () {
   return (
     <div>
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Resume />} />
@@ -28,7 +28,7 @@ export default function Routing () {
             <Route path='*' element={<NoPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   )
 }
