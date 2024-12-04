@@ -37,6 +37,8 @@ nav {
   .active {
     background-color: #0073e6;
     color: #fff;
+    border: 2px;
+    border-radius: 8px;
   }
 
   

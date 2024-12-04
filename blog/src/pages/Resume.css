@@ -88,26 +88,26 @@
   }
   
   /* Footer */
-  footer {
+  /* footer {
     text-align: center;
     padding: 15px 0;
-    background-color: #111; /* Dark footer background */
+    background-color: #111; 
     color: #f4f4f4;
     border-top: 1px solid #444;
-  }
+  } */
   ul{
     padding-left: 0;
   }
   
-  footer a {
+  /* footer a {
     color: #4da8da;
     text-decoration: none;
-  }
+  } */
   
-  footer a:hover {
+  /* footer a:hover {
     text-decoration: underline;
   }
-  
+   */
   /* Responsive Design */
   @media (max-width: 768px) {
     .contact-info {

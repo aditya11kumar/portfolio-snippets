@@ -85,9 +85,7 @@ code {
 .copy-button:hover {
   background-color: #3b8fa0;
 }
-header, footer{
-  flex: none;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
