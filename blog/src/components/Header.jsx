@@ -33,7 +33,7 @@ export default function Header() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link text-center     ${
                   location.pathname === "/" ? "active" : ""
                 }`}
                 to="/"
@@ -43,7 +43,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/JavaScript" ? "active" : ""
                 }`}
                 to="/snippets/JavaScript"
@@ -53,7 +53,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/es6" ? "active" : ""
                 }`}
                 to="/snippets/es6"
@@ -63,7 +63,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/reactjs" ? "active" : ""
                 }`}
                 to="/snippets/reactjs"
@@ -73,7 +73,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/nodejs" ? "active" : ""
                 }`}
                 to="/snippets/nodejs"
@@ -83,7 +83,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/sql" ? "active" : ""
                 }`}
                 to="/snippets/sql"

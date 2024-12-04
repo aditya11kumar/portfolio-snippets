@@ -41,4 +41,18 @@ nav {
     border-radius: 8px;
   }
 
+  .nav-link{
+    color: white;
+  }
+  .navbar-nav .nav-link:hover {
+    background-color: #575757;  /* Dark gray background */
+    color: #e0e0e0;  /* Light gray text */
+    border-radius: 8px;
+  }
   
+  .active:hover {
+    background-color: darkturquoise;
+    color: #fff;
+    border: 2px;
+    border-radius: 8px;
+  }
