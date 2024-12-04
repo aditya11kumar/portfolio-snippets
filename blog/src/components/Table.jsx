@@ -43,11 +43,11 @@ export default function Table({ data }) {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="12"
+                    height="12"
                     fill="currentColor"
                     class="bi bi-copy"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 18 18"
                   >
                     <path
                       fill-rule="evenodd"
