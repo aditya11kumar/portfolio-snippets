@@ -84,11 +84,31 @@ export default function Header() {
             <li className="nav-item">
               <Link
                 className={`nav-link text-center   ${
+                  location.pathname === "/snippets/reactsnippets" ? "active" : ""
+                }`}
+                to="/snippets/reactsnippets"
+              >
+                React JS Advance
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/nodejs" ? "active" : ""
                 }`}
                 to="/snippets/nodejs"
               >
                 Node JS
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link text-center   ${
+                  location.pathname === "/snippets/nodesnippets" ? "active" : ""
+                }`}
+                to="/snippets/nodesnippets"
+              >
+                Node JS Advance
               </Link>
             </li>
             <li className="nav-item">

@@ -1,0 +1,90 @@
+{
+    "features": [
+      {
+        "title": "Basic Express Server",
+        "description": "Setting up a basic Express.js server.",
+        "example": "const express = require('express');\nconst app = express();\nconst port = 3000;\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.listen(port, () => {\n  console.log(`Server running at http://localhost:${port}/`);\n});"
+      },
+      {
+        "title": "Middleware Example",
+        "description": "Using middleware to log request details.",
+        "example": "const express = require('express');\nconst app = express();\n\n// Custom middleware\napp.use((req, res, next) => {\n  console.log(`${req.method} ${req.url}`);\n  next();\n});\n\napp.get('/', (req, res) => {\n  res.send('Hello World with Middleware!');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running...');\n});"
+      },
+      {
+        "title": "JSON Response",
+        "description": "Sending JSON response in an API.",
+        "example": "const express = require('express');\nconst app = express();\n\napp.get('/api', (req, res) => {\n  res.json({ message: 'Hello, API!' });\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "Route Parameters",
+        "description": "Using route parameters in Express.js routes.",
+        "example": "const express = require('express');\nconst app = express();\n\napp.get('/user/:id', (req, res) => {\n  const userId = req.params.id;\n  res.send(`User ID: ${userId}`);\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "POST Request with Body",
+        "description": "Handling POST requests with JSON body data.",
+        "example": "const express = require('express');\nconst app = express();\n\napp.use(express.json()); // Middleware to parse JSON body\n\napp.post('/user', (req, res) => {\n  const userData = req.body;\n  res.json({ message: 'User data received', data: userData });\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "GET Request with Query Parameters",
+        "description": "Handling GET requests with query parameters.",
+        "example": "const express = require('express');\nconst app = express();\n\napp.get('/search', (req, res) => {\n  const { q, page } = req.query;\n  res.send(`Search query: ${q}, Page: ${page}`);\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "File Upload using Multer",
+        "description": "Uploading files in Express.js using Multer.",
+        "example": "const express = require('express');\nconst multer = require('multer');\nconst upload = multer({ dest: 'uploads/' });\nconst app = express();\n\napp.post('/upload', upload.single('file'), (req, res) => {\n  res.send(`File uploaded: ${req.file.filename}`);\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "Database Connection (MongoDB)",
+        "description": "Connecting to a MongoDB database using Mongoose.",
+        "example": "const express = require('express');\nconst mongoose = require('mongoose');\nconst app = express();\n\nmongoose.connect('mongodb://localhost:27017/mydb', { useNewUrlParser: true, useUnifiedTopology: true });\n\nmongoose.connection.on('connected', () => {\n  console.log('Connected to MongoDB');\n});\n\napp.get('/', (req, res) => {\n  res.send('Hello MongoDB!');\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "CRUD Operations (MongoDB)",
+        "description": "Performing basic CRUD operations in Express with MongoDB.",
+        "example": "const express = require('express');\nconst mongoose = require('mongoose');\nconst app = express();\napp.use(express.json());\n\nmongoose.connect('mongodb://localhost:27017/mydb', { useNewUrlParser: true, useUnifiedTopology: true });\n\nconst User = mongoose.model('User', new mongoose.Schema({\n  name: String,\n  age: Number\n}));\n\n// Create\napp.post('/user', async (req, res) => {\n  const user = new User(req.body);\n  await user.save();\n  res.status(201).send(user);\n});\n\n// Read\napp.get('/user/:id', async (req, res) => {\n  const user = await User.findById(req.params.id);\n  if (!user) return res.status(404).send('User not found');\n  res.send(user);\n});\n\n// Update\napp.put('/user/:id', async (req, res) => {\n  const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });\n  if (!user) return res.status(404).send('User not found');\n  res.send(user);\n});\n\n// Delete\napp.delete('/user/:id', async (req, res) => {\n  const user = await User.findByIdAndDelete(req.params.id);\n  if (!user) return res.status(404).send('User not found');\n  res.send('User deleted');\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "Database Connection (PostgreSQL)",
+        "description": "Connecting to a PostgreSQL database using `pg` module.",
+        "example": "const express = require('express');\nconst { Client } = require('pg');\nconst app = express();\n\nconst client = new Client({\n  user: 'username',\n  host: 'localhost',\n  database: 'yourdb',\n  password: 'yourpassword',\n  port: 5432,\n});\n\nclient.connect()\n  .then(() => console.log('Connected to PostgreSQL'))\n  .catch(err => console.error('Connection error', err.stack));\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "CRUD Operations (PostgreSQL)",
+        "description": "Performing CRUD operations using PostgreSQL and `pg` module.",
+        "example": "const express = require('express');\nconst { Client } = require('pg');\nconst app = express();\napp.use(express.json());\n\nconst client = new Client({\n  user: 'username',\n  host: 'localhost',\n  database: 'yourdb',\n  password: 'yourpassword',\n  port: 5432,\n});\n\nclient.connect();\n\n// Create\napp.post('/user', async (req, res) => {\n  const { name, age } = req.body;\n  const result = await client.query('INSERT INTO users(name, age) VALUES($1, $2) RETURNING *', [name, age]);\n  res.status(201).json(result.rows[0]);\n});\n\n// Read\napp.get('/user/:id', async (req, res) => {\n  const result = await client.query('SELECT * FROM users WHERE id = $1', [req.params.id]);\n  res.json(result.rows[0]);\n});\n\n// Update\napp.put('/user/:id', async (req, res) => {\n  const { name, age } = req.body;\n  const result = await client.query('UPDATE users SET name = $1, age = $2 WHERE id = $3 RETURNING *', [name, age, req.params.id]);\n  res.json(result.rows[0]);\n});\n\n// Delete\napp.delete('/user/:id', async (req, res) => {\n  await client.query('DELETE FROM users WHERE id = $1', [req.params.id]);\n  res.status(200).send('User deleted');\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "Database Connection (MySQL)",
+        "description": "Connecting to a MySQL database using `mysql2` module.",
+        "example": "const express = require('express');\nconst mysql = require('mysql2');\nconst app = express();\n\nconst connection = mysql.createConnection({\n  host: 'localhost',\n  user: 'username',\n  database: 'yourdb',\n  password: 'yourpassword'\n});\n\nconnection.connect((err) => {\n  if (err) throw err;\n  console.log('Connected to MySQL');\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "CRUD Operations (MySQL)",
+        "description": "Performing CRUD operations using MySQL and `mysql2` module.",
+        "example": "const express = require('express');\nconst mysql = require('mysql2');\nconst app = express();\napp.use(express.json());\n\nconst connection = mysql.createConnection({\n  host: 'localhost',\n  user: 'username',\n  database: 'yourdb',\n  password: 'yourpassword'\n});\n\n// Create\napp.post('/user', (req, res) => {\n  const { name, age } = req.body;\n  connection.query('INSERT INTO users (name, age) VALUES (?, ?)', [name, age], (err, result) => {\n    if (err) throw err;\n    res.status(201).json({ id: result.insertId, name, age });\n  });\n});\n\n// Read\napp.get('/user/:id', (req, res) => {\n  connection.query('SELECT * FROM users WHERE id = ?', [req.params.id], (err, results) => {\n    if (err) throw err;\n    res.json(results[0]);\n  });\n});\n\n// Update\napp.put('/user/:id', (req, res) => {\n  const { name, age } = req.body;\n  connection.query('UPDATE users SET name = ?, age = ? WHERE id = ?', [name, age, req.params.id], (err, result) => {\n    if (err) throw err;\n    res.json({ id: req.params.id, name, age });\n  });\n});\n\n// Delete\napp.delete('/user/:id', (req, res) => {\n  connection.query('DELETE FROM users WHERE id = ?', [req.params.id], (err, result) => {\n    if (err) throw err;\n    res.status(200).send('User deleted');\n  });\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "Passport.js Authentication (Local Strategy)",
+        "description": "Authentication using Passport.js with local strategy.",
+        "example": "const express = require('express');\nconst passport = require('passport');\nconst LocalStrategy = require('passport-local').Strategy;\nconst app = express();\n\napp.use(express.json());\n\n// User database simulation\nconst users = [{ id: 1, username: 'admin', password: 'password' }];\n\npassport.use(new LocalStrategy((username, password, done) => {\n  const user = users.find(u => u.username === username);\n  if (!user) return done(null, false, { message: 'Incorrect username.' });\n  if (user.password !== password) return done(null, false, { message: 'Incorrect password.' });\n  return done(null, user);\n}));\n\npassport.serializeUser((user, done) => {\n  done(null, user.id);\n});\n\npassport.deserializeUser((id, done) => {\n  const user = users.find(u => u.id === id);\n  done(null, user);\n});\n\n// Routes\napp.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {\n  res.send('Logged in successfully');\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "Authentication (JWT)",
+        "description": "Authentication using JWT (JSON Web Token).",
+        "example": "const express = require('express');\nconst jwt = require('jsonwebtoken');\nconst app = express();\napp.use(express.json());\n\nconst secretKey = 'yourSecretKey';\n\n// Generate JWT\napp.post('/login', (req, res) => {\n  const { username, password } = req.body;\n  // Validate username/password (for simplicity, not doing it here)\n  const token = jwt.sign({ username }, secretKey, { expiresIn: '1h' });\n  res.json({ token });\n});\n\n// Protect Route\napp.get('/protected', (req, res) => {\n  const token = req.headers['authorization']?.split(' ')[1];\n  if (!token) return res.status(403).send('Token is required');\n\n  jwt.verify(token, secretKey, (err, decoded) => {\n    if (err) return res.status(403).send('Invalid token');\n    res.send(`Welcome ${decoded.username}`);\n  });\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "Environment Variables",
+        "description": "Using environment variables in Node.js with dotenv.",
+        "example": "require('dotenv').config();\nconst express = require('express');\nconst app = express();\n\nconst dbHost = process.env.DB_HOST;\n\napp.get('/', (req, res) => {\n  res.send(`Database Host: ${dbHost}`);\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      },
+      {
+        "title": "CORS Setup",
+        "description": "Setting up CORS in an Express.js app.",
+        "example": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\n\napp.use(cors());\n\napp.get('/', (req, res) => {\n  res.send('CORS enabled!');\n});\n\napp.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});"
+      }
+    ]
+  }
+  

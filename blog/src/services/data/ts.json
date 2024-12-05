@@ -31,6 +31,11 @@
         "example": "type Point = { x: number; y: number };\nconst point: Point = { x: 10, y: 20 };"
       },
       {
+        "title": "Modules and Namespaces",
+        "description": "Encapsulates code into reusable modules or namespaces for better organization.",
+        "example": "// Export\nexport function add(a: number, b: number): number {\n  return a + b;\n}\n// Import\nimport { add } from './math';\nconsole.log(add(2, 3));"
+      },
+      {
         "title": "Union and Intersection Types",
         "description": "Combines multiple types into one.",
         "example": "// Union\nlet value: string | number;\nvalue = 'Hello';\nvalue = 42;\n\n// Intersection\ntype Admin = { admin: boolean };\ntype User = { name: string };\ntype AdminUser = Admin & User;\nconst adminUser: AdminUser = { admin: true, name: 'John' };"
@@ -71,9 +76,19 @@
         "example": "let value: any = 'hello';\nlet strLength: number = (value as string).length;\nconsole.log(strLength);"
       },
       {
-        "title": "Optional Properties",
-        "description": "Defines properties that may or may not exist.",
-        "example": "interface User {\n  name: string;\n  age?: number;\n}\nconst user: User = { name: 'John' };"
+        "title": "Optional and Default Properties",
+        "description": "Defines properties that may or may not be present, with defaults if missing.",
+        "example": "interface User {\n  name: string;\n  age?: number;\n}\nconst user: User = { name: 'Alice' };"
+      },
+      {
+        "title": "Readonly and Const",
+        "description": "Prevents reassignment of variables or modification of object properties.",
+        "example": "interface User {\n  readonly id: number;\n  name: string;\n}\nconst user: User = { id: 1, name: 'Alice' };\nuser.name = 'Bob'; // Allowed\nuser.id = 2; // Error"
+      },
+      {
+        "title": "Error Handling with TypeScript",
+        "description": "Ensures type safety with exceptions and custom error objects.",
+        "example": "class CustomError extends Error {\n  constructor(message: string) {\n    super(message);\n    this.name = 'CustomError';\n  }\n}\ntry {\n  throw new CustomError('Something went wrong!');\n} catch (error) {\n  console.error(error.message);\n}"
       },
       {
         "title": "Non-Null Assertion",
@@ -89,6 +104,11 @@
         "title": "Advanced Tuple Types",
         "description": "Adds labels and supports variable-length tuple types.",
         "example": "type Point = [x: number, y: number];\nconst point: Point = [10, 20];\n\n// Variable-length tuple\ntype List = [number, ...string[]];\nconst list: List = [1, 'a', 'b', 'c'];"
+      },
+      {
+        "title": "Tooling and Configuration",
+        "description": "Uses tsconfig.json for compiler options and linting tools like ESLint for better developer experience.",
+        "example": "// tsconfig.json\n{\n  \"compilerOptions\": {\n    \"target\": \"ES6\",\n    \"module\": \"commonjs\",\n    \"strict\": true,\n    \"esModuleInterop\": true\n  }\n}"
       }
     ]
   }
