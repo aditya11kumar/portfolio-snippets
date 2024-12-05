@@ -39,7 +39,7 @@ export default function Resume() {
       <section>
         <h2>Professional Experience</h2>
         <div className="section-content">
-          <p><strong>Engineer at Nagarro Software</strong> | April 2022 - Present</p>
+          <p><strong>Engineer at Nagarro Software</strong> | April 2022 - May 2024</p>
           <ul>
             <li>Developed and maintained responsive front-end applications with cross-browser compatibility.</li>
             <li>Designed robust back-end services using Python Flask, Node.js, and Express.js with secure REST APIs.</li>
