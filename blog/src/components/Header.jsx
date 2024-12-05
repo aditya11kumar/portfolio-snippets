@@ -54,6 +54,16 @@ export default function Header() {
             <li className="nav-item">
               <Link
                 className={`nav-link text-center   ${
+                  location.pathname === "/snippets/typescript" ? "active" : ""
+                }`}
+                to="/snippets/typescript"
+              >
+              TypeScript
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/es6" ? "active" : ""
                 }`}
                 to="/snippets/es6"

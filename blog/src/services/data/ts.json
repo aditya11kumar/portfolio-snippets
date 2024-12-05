@@ -1,0 +1,95 @@
+{
+    "features": [
+      {
+        "title": "Type Annotations",
+        "description": "Allows you to specify the type of a variable, function parameter, or return value.",
+        "example": "let age: number = 25;\nfunction greet(name: string): string {\n  return `Hello, ${name}`;\n}"
+      },
+      {
+        "title": "Interfaces",
+        "description": "Defines the shape of an object, including properties and methods.",
+        "example": "interface User {\n  name: string;\n  age: number;\n  greet(): void;\n}\nconst user: User = {\n  name: 'John',\n  age: 30,\n  greet() {\n    console.log('Hello!');\n  }\n};"
+      },
+      {
+        "title": "Classes and Access Modifiers",
+        "description": "Enhances object-oriented programming with private, protected, and public access levels.",
+        "example": "class Person {\n  private name: string;\n  constructor(name: string) {\n    this.name = name;\n  }\n  public greet() {\n    console.log(`Hello, ${this.name}`);\n  }\n}\nconst john = new Person('John');\njohn.greet();"
+      },
+      {
+        "title": "Enums",
+        "description": "Defines a set of named constants.",
+        "example": "enum Direction {\n  Up = 1,\n  Down,\n  Left,\n  Right\n}\nlet move: Direction = Direction.Up;\nconsole.log(move); // 1"
+      },
+      {
+        "title": "Generics",
+        "description": "Enables type-safe and reusable components.",
+        "example": "function identity<T>(value: T): T {\n  return value;\n}\nconst result = identity<string>('Hello');\nconsole.log(result);"
+      },
+      {
+        "title": "Type Aliases",
+        "description": "Gives a type a new name for readability and reuse.",
+        "example": "type Point = { x: number; y: number };\nconst point: Point = { x: 10, y: 20 };"
+      },
+      {
+        "title": "Union and Intersection Types",
+        "description": "Combines multiple types into one.",
+        "example": "// Union\nlet value: string | number;\nvalue = 'Hello';\nvalue = 42;\n\n// Intersection\ntype Admin = { admin: boolean };\ntype User = { name: string };\ntype AdminUser = Admin & User;\nconst adminUser: AdminUser = { admin: true, name: 'John' };"
+      },
+      {
+        "title": "Utility Types",
+        "description": "Predefined types that help manipulate types easily.",
+        "example": "// Partial\ninterface Todo {\n  title: string;\n  completed: boolean;\n}\nconst todo: Partial<Todo> = { title: 'Learn TypeScript' };\n\n// Readonly\nconst readonlyTodo: Readonly<Todo> = { title: 'Learn TypeScript', completed: false };"
+      },
+      {
+        "title": "Type Guards",
+        "description": "Ensures type correctness during runtime using conditional checks.",
+        "example": "function isString(value: unknown): value is string {\n  return typeof value === 'string';\n}\nif (isString('hello')) {\n  console.log('It is a string');\n}"
+      },
+      {
+        "title": "Mapped Types",
+        "description": "Allows creation of new types by mapping over existing types.",
+        "example": "type User = {\n  id: number;\n  name: string;\n};\ntype ReadonlyUser = {\n  readonly [K in keyof User]: User[K];\n};"
+      },
+      {
+        "title": "Never Type",
+        "description": "Represents a value that will never occur.",
+        "example": "function error(message: string): never {\n  throw new Error(message);\n}"
+      },
+      {
+        "title": "Decorators",
+        "description": "Special syntax for modifying classes and members.",
+        "example": "function Log(target: any, key: string) {\n  console.log(`${key} was accessed`);\n}\nclass User {\n  @Log\n  name: string;\n  constructor(name: string) {\n    this.name = name;\n  }\n}"
+      },
+      {
+        "title": "Module Resolution",
+        "description": "Supports modular code by importing and exporting components.",
+        "example": "// user.ts\nexport interface User {\n  name: string;\n}\n// app.ts\nimport { User } from './user';\nconst user: User = { name: 'John' };"
+      },
+      {
+        "title": "Type Assertions",
+        "description": "Forces TypeScript to treat a value as a specific type.",
+        "example": "let value: any = 'hello';\nlet strLength: number = (value as string).length;\nconsole.log(strLength);"
+      },
+      {
+        "title": "Optional Properties",
+        "description": "Defines properties that may or may not exist.",
+        "example": "interface User {\n  name: string;\n  age?: number;\n}\nconst user: User = { name: 'John' };"
+      },
+      {
+        "title": "Non-Null Assertion",
+        "description": "Asserts that a value is not null or undefined.",
+        "example": "const value: string | null = 'hello';\nconsole.log(value!); // Non-null assertion"
+      },
+      {
+        "title": "Discriminated Unions",
+        "description": "A union of types that share a common property.",
+        "example": "interface Circle {\n  kind: 'circle';\n  radius: number;\n}\ninterface Rectangle {\n  kind: 'rectangle';\n  width: number;\n  height: number;\n}\ntype Shape = Circle | Rectangle;\nfunction area(shape: Shape): number {\n  if (shape.kind === 'circle') {\n    return Math.PI * shape.radius ** 2;\n  }\n  return shape.width * shape.height;\n}"
+      },
+      {
+        "title": "Advanced Tuple Types",
+        "description": "Adds labels and supports variable-length tuple types.",
+        "example": "type Point = [x: number, y: number];\nconst point: Point = [10, 20];\n\n// Variable-length tuple\ntype List = [number, ...string[]];\nconst list: List = [1, 'a', 'b', 'c'];"
+      }
+    ]
+  }
+  

@@ -10,6 +10,7 @@ import NodeJsPage from '../../pages/NodeJsPage'
 import Es6 from '../../pages/Es6'
 import Sql from '../../pages/Sql'
 import JavaScript from '../../pages/JavaScript'
+import Typescript from '../../pages/Typescript'
 
 export default function Routing () {
   return (
@@ -23,6 +24,8 @@ export default function Routing () {
             <Route path='/snippets/nodejs' element ={<NodeJsPage />} />
             <Route path='/snippets/sql' element ={< Sql />} />
             <Route path='/snippets/JavaScript' element ={<JavaScript />} />
+            <Route path='/snippets/typescript' element ={<Typescript />} />
+
             <Route path='/list' element={<List />} />
             <Route path='/details/:blogId?' element={<Details />} />
             <Route path='*' element={<NoPage />} />
