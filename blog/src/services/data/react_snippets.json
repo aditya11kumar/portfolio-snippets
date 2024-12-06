@@ -1,6 +1,16 @@
 {
     "features": [
       {
+        "title": "React Routing with Active Links",
+        "description": "Set up routing in a React application with active link highlighting using the useLocation hook.",
+        "example": "import React from 'react';\nimport { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';\n\nfunction Home() {\n  return <h2>Home Page</h2>;\n}\n\nfunction About() {\n  return <h2>About Us</h2>;\n}\n\nfunction Services() {\n  return <h2>Our Services</h2>;\n}\n\nfunction Contact() {\n  return <h2>Contact Us</h2>;\n}\n\nfunction NotFound() {\n  return <h2>404 - Page Not Found</h2>;\n}\n\nfunction Header() {\n  const location = useLocation();\n\n  const isActive = (path) => location.pathname === path;\n\n  return (\n    <nav style={{ display: 'flex', gap: '10px', padding: '10px', backgroundColor: '#f4f4f4' }}>\n      <Link to=\"/\" style={isActive('/') ? { fontWeight: 'bold', color: 'blue' } : {}}>Home</Link>\n      <Link to=\"/about\" style={isActive('/about') ? { fontWeight: 'bold', color: 'blue' } : {}}>About</Link>\n      <Link to=\"/services\" style={isActive('/services') ? { fontWeight: 'bold', color: 'blue' } : {}}>Services</Link>\n      <Link to=\"/contact\" style={isActive('/contact') ? { fontWeight: 'bold', color: 'blue' } : {}}>Contact</Link>\n    </nav>\n  );\n}\n\nfunction App() {\n  return (\n    <Router>\n      <Header />\n      <Routes>\n        <Route path=\"/\" element={<Home />} />\n        <Route path=\"/about\" element={<About />} />\n        <Route path=\"/services\" element={<Services />} />\n        <Route path=\"/contact\" element={<Contact />} />\n        <Route path=\"*\" element={<NotFound />} />\n      </Routes>\n    </Router>\n  );\n}\n\nexport default App;"
+      }
+      ,{
+        "title": "Routing in React",
+        "description": "Set up routing with React Router to navigate between pages.",
+        "example": "import React from 'react';\nimport { BrowserRouter as Router, Route, Routes } from 'react-router-dom';\nimport Header from './Header';\n\nfunction Home() {\n  return <h2>Welcome to the Home Page</h2>;\n}\n\nfunction About() {\n  return <h2>About Us</h2>;\n}\n\nfunction Contact() {\n  return <h2>Contact Us</h2>;\n}\n\nfunction App() {\n  return (\n    <Router>\n      <Header />\n      <Routes>\n        <Route path=\"/\" element={<Home />} />\n        <Route path=\"/about\" element={<About />} />\n        <Route path=\"/contact\" element={<Contact />} />\n      </Routes>\n    </Router>\n  );\n}\n\nexport default App;"
+      },
+      {
         "title": "Fetching Data with useEffect",
         "description": "Fetch data from an API and display it in a component.",
         "example": "import React, { useState, useEffect } from 'react';\n\nfunction FetchData() {\n  const [data, setData] = useState([]);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    fetch('https://jsonplaceholder.typicode.com/posts')\n      .then((response) => response.json())\n      .then((data) => {\n        setData(data);\n        setLoading(false);\n      });\n  }, []);\n\n  if (loading) return <p>Loading...</p>;\n\n  return (\n    <ul>\n      {data.map((item) => (\n        <li key={item.id}>{item.title}</li>\n      ))}\n    </ul>\n  );\n}\n\nexport default FetchData;"
@@ -20,6 +30,7 @@
         "description": "Filter data in a table based on user input.",
         "example": "import React, { useState } from 'react';\n\nfunction SearchableTable() {\n  const [search, setSearch] = useState('');\n  const data = [\n    { id: 1, name: 'John Doe', age: 28 },\n    { id: 2, name: 'Jane Smith', age: 32 }\n  ];\n\n  const filteredData = data.filter((row) => row.name.toLowerCase().includes(search.toLowerCase()));\n\n  return (\n    <div>\n      <input\n        type=\"text\"\n        placeholder=\"Search by name\"\n        value={search}\n        onChange={(e) => setSearch(e.target.value)}\n      />\n      <table border=\"1\">\n        <thead>\n          <tr>\n            <th>Name</th>\n            <th>Age</th>\n          </tr>\n        </thead>\n        <tbody>\n          {filteredData.map((row) => (\n            <tr key={row.id}>\n              <td>{row.name}</td>\n              <td>{row.age}</td>\n            </tr>\n          ))}\n        </tbody>\n      </table>\n    </div>\n  );\n}\n\nexport default SearchableTable;"
       },
+      
       {
         "title": "Pagination",
         "description": "Display paginated data with next and previous controls.",
