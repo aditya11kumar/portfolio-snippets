@@ -30,6 +30,28 @@
         "description": "Simple route definitions using React Router.",
         "example": "<BrowserRouter>\n <Routes>\n <Route path='/home' element={<Home />} />\n </Routes>\n</BrowserRouter>"
       },
+        {
+          "title": "Create (POST) Request",
+          "description": "Send data to the server to create a new resource.",
+          "example": "const createData = async () => {\n  const response = await fetch('https://example.com/api/items', {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify({\n      name: 'New Item',\n      description: 'This is a new item'\n    })\n  });\n\n  const data = await response.json();\n  console.log('Created Item:', data);\n};"
+        },
+        {
+          "title": "Read (GET) Request",
+          "description": "Fetch data from the server.",
+          "example": "const getData = async () => {\n  const response = await fetch('https://example.com/api/items');\n  const data = await response.json();\n  console.log('Fetched Items:', data);\n};"
+        },
+        {
+          "title": "Update (PUT) Request",
+          "description": "Update an existing resource on the server.",
+          "example": "const updateData = async (id) => {\n  const response = await fetch(`https://example.com/api/items/${id}`, {\n    method: 'PUT',\n    headers: {\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify({\n      name: 'Updated Item',\n      description: 'This item has been updated'\n    })\n  });\n\n  const data = await response.json();\n  console.log('Updated Item:', data);\n};"
+        },
+        {
+          "title": "Delete (DELETE) Request",
+          "description": "Remove a resource from the server.",
+          "example": "const deleteData = async (id) => {\n  const response = await fetch(`https://example.com/api/items/${id}`, {\n    method: 'DELETE'\n  });\n\n  if (response.ok) {\n    console.log(`Item ${id} deleted successfully`);\n  } else {\n    console.log('Failed to delete the item');\n  }\n};"
+        },
+      
+      
       {
         "title": "Route Layout",
         "description": "Define shared layouts for routes.",
