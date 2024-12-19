@@ -14,7 +14,7 @@ export default function Table({ data }) {
   };
 
   return (
-    <div className="custom-accordion">
+    <div className="custom-accordion ">
       <Accordion flush>
         {data.features.map((feature, index) => (
           <Accordion.Item
