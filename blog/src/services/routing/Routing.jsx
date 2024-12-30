@@ -13,6 +13,7 @@ import JavaScript from '../../pages/JavaScript'
 import Typescript from '../../pages/Typescript'
 import ReactSnippets from '../../pages/ReactSnippets'
 import NodeSnippets from '../../pages/NodeSnippets'
+import Components from '../../pages/Components'
 
 export default function Routing () {
   return (
@@ -29,6 +30,7 @@ export default function Routing () {
             <Route path='/snippets/typescript' element ={<Typescript />} />
             <Route path='/snippets/reactsnippets' element ={<ReactSnippets />} />
             <Route path='/snippets/nodesnippets' element ={<NodeSnippets />} />
+            <Route path='/snippets/components' element ={<Components />} />
             <Route path='/list' element={<List />} />
             <Route path='/details/:blogId?' element={<Details />} />
             <Route path='*' element={<NoPage />} />

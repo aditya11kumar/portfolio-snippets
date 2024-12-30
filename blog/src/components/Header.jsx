@@ -94,6 +94,16 @@ export default function Header() {
             <li className="nav-item">
               <Link
                 className={`nav-link text-center   ${
+                  location.pathname === "/snippets/components" ? "active" : ""
+                }`}
+                to="/snippets/components"
+              >
+                Tailwind Components
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link text-center   ${
                   location.pathname === "/snippets/nodejs" ? "active" : ""
                 }`}
                 to="/snippets/nodejs"
