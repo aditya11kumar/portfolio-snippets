@@ -118,8 +118,7 @@ export default function Resume() {
                 efficient email management with a secure user interface.
               </li>
               <li>
-                <strong>Technology Stack:</strong> React.js, Node.js,
-                Express.js, MySQL.
+                <strong>Technology Stack:</strong> React.js, Python, Flask, MySQL.
               </li>
               <li>
                 <strong>Key Features:</strong> Tracks incoming alert emails,
