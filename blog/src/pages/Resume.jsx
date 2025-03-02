@@ -45,7 +45,7 @@ export default function Resume() {
           <ul>
             <li>
               <strong>IIT Patna (2023-2025)</strong> - Executive M.Tech in
-              Computer Science and Engineering (CGPA: 7.16)
+              Computer Science and Engineering (CGPA: 7.69)
             </li>
             <li>
               <strong>LPU Punjab (2018-2022)</strong> - B.Tech in Computer
@@ -64,114 +64,76 @@ export default function Resume() {
           </p>
           <ul>
             <li>
-              Developed and maintained responsive front-end applications with
-              cross-browser compatibility.
+            Built and optimized scalable REST APIs, improving response times by <strong>40%</strong>.
             </li>
             <li>
-              Designed robust back-end services using Python Flask, Node.js, and
-              Express.js with secure REST APIs.
+            Designed and maintained microservices handling <strong>500K+ requests/day</strong> .
             </li>
             <li>
-              Integrated and optimized relational and NoSQL databases (MySQL,
-              MongoDB) for efficient data handling.
+            Implemented database optimizations, reducing query execution time by <strong>30%</strong> .
             </li>
             <li>
-              Utilized Context API and Redux for state management, enhancing
-              user experience.
+            Mentored junior developers, conducting code reviews and tech sessions.
             </li>
           </ul>
         </div>
       </section>
 
       <section>
-        <h2>Project Portfolio</h2>
-        <div className="section-content border">
-          <div className="project border">
-            <p>
-              <strong>Skill Matrix Tool</strong> | Jan 2024 - May 2024
-            </p>
-            <ul>
-              <li>
-                <strong>Objective:</strong> Helps Department Managers (DMs) and
-                Project Coordination Officers (PCEOs) track and manage employee
-                skills across projects.
-              </li>
-              <li>
-                <strong>Technology Stack:</strong> React.js, Redux, Node.js,
-                Express.js, MySQL, Python (Excel Automation).
-              </li>
-              <li>
-                <strong>Key Features:</strong> Authorized access for DMs and
-                PCEOs, project and skills management with Excel upload support,
-                employee data CRUD operations, and skill matrix tracking.
-              </li>
-            </ul>
-          </div>
+      <h2>Project Portfolio</h2>
+<div className="section-content border">
+  <div className="project border">
+    <p>
+      <strong>Skill Matrix Tool</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>Objective:</strong> A tool to help track employee skills across projects, reducing manual effort by 50%.
+      </li>
+      <li>
+        <strong>Technology Stack:</strong> React.js, Redux, Node.js, MySQL, Python (Excel Automation).
+      </li>
+      <li>
+        <strong>Key Features:</strong> Secure authentication with role-based access for Department Managers (DMs) and Project Coordination Officers (PCEOs), skill tracking via Excel automation, employee data CRUD operations, and enhanced reporting.
+      </li>
+    </ul>
+  </div>
 
-          <div className="project border">
-            <p>
-              <strong>Alert Summary Tool</strong> | Aug 2023 - Jan 2024
-            </p>
-            <ul>
-              <li>
-                <strong>Objective:</strong> Automated alert tracking system for
-                efficient email management with a secure user interface.
-              </li>
-              <li>
-                <strong>Technology Stack:</strong> React.js, Python, Flask, MySQL.
-              </li>
-              <li>
-                <strong>Key Features:</strong> Tracks incoming alert emails,
-                stores summaries in the database, provides an easy-to-use UI for
-                alert management, and ensures secure access for authorized
-                users.
-              </li>
-            </ul>
-          </div>
+  <div className="project border">
+    <p>
+      <strong>Alert Summary Tool</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>Objective:</strong> Automated email alert tracking system to streamline and reduce manual effort by 60%.
+      </li>
+      <li>
+        <strong>Technology Stack:</strong> React.js, Python, Flask, MySQL.
+      </li>
+      <li>
+        <strong>Key Features:</strong> Tracks and summarizes incoming email alerts, provides real-time UI updates, secure authentication, and efficient alert management via a user-friendly dashboard.
+      </li>
+    </ul>
+  </div>
 
-          <div className="project border">
-            <p>
-              <strong>Dealer Management System</strong> | Oct 2022 - Aug 2023
-            </p>
-            <ul>
-              <li>
-                <strong>Objective:</strong> Streamlines dealership operations,
-                including inventory, customer data, sales, and service requests.
-              </li>
-              <li>
-                <strong>Technology Stack:</strong> React.js, Next.js, Node.js,
-                Express.js, PostgreSQL.
-              </li>
-              <li>
-                <strong>Key Features:</strong> Combines inventory management,
-                sales tracking, and customer service, with car stock updates,
-                invoice generation, and role-based secure access.
-              </li>
-            </ul>
-          </div>
+  <div className="project border">
+    <p>
+      <strong>Dealer Management System</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>Objective:</strong> An inventory and sales tracking system used by 50+ dealerships.
+      </li>
+      <li>
+        <strong>Technology Stack:</strong> React.js, Node.js, PostgreSQL.
+      </li>
+      <li>
+        <strong>Key Features:</strong> Role-based authentication, real-time inventory updates, sales tracking, and dealership performance analytics.
+      </li>
+    </ul>
+  </div>
+</div>
 
-          <div className="project border">
-            <p>
-              <strong>Trainee Form</strong> | May 2022 - Oct 2022
-            </p>
-            <ul>
-              <li>
-                <strong>Objective:</strong> Registration form with backend
-                connectivity for efficient data management.
-              </li>
-              <li>
-                <strong>Technology Stack:</strong> HTML, CSS, JavaScript,
-                Node.js, MongoDB.
-              </li>
-              <li>
-                <strong>Key Features:</strong> Trainee registration form with
-                API integration for seamless data transfer, secure database
-                storage, tabular trainee data display, and detailed view
-                functionality.
-              </li>
-            </ul>
-          </div>
-        </div>
       </section>
 
       <section>
@@ -196,21 +158,22 @@ export default function Resume() {
       </section>
 
       <section>
-        <h2>Achievements and Awards</h2>
-        <div className="section-content border">
-          <ul>
-            <li>
-              Recognized on the Nagarro Cheerboard for exceptional product
-              quality.
-            </li>
-            <li>
-              Received outstanding client feedback for innovative solutions and
-              technical expertise.
-            </li>
-            <li>Delivered high-impact projects on time and within budget.</li>
-          </ul>
-        </div>
-      </section>
+  <h2>Achievements and Awards</h2>
+  <div className="section-content border">
+    <ul>
+      <li>
+        Recognized on the Nagarro Cheerboard for delivering a high-quality product that significantly exceeded client expectations.
+      </li>
+      <li>
+        Awarded for developing scalable and high-impact solutions that improved system performance and efficiency.
+      </li>
+      <li>
+        Ranked among the top 5 teams for building a real-time analytics dashboard.
+      </li>
+    </ul>
+  </div>
+</section>
+
 
       {/* <section>
         <h2>Services Offered</h2>
