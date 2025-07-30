@@ -15,8 +15,8 @@ export default function Resume() {
           <p>📞 +91-7667025267</p>
           <p>
             ✉️{" "}
-            <a href="mailto:adityakumar110799@gmail.com">
-              adityakumar110799@gmail.com
+            <a href="mailto:iameraditya@gmail.com">
+              iameraditya@gmail.com
             </a>
           </p>
           <p>
